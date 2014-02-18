@@ -1,3 +1,4 @@
+<h1>SCryptCFC - SCrypt Hashing in ColdFusion</h1>
 <cfscript>
 	start = getTickCount();
 	SCrypt = createObject("component", "SCrypt").init();

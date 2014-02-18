@@ -8,19 +8,17 @@ component name="SCrypt"
 	}
 
 	public string function scryptHash(
-		required string password = "",
+		required string s = "",
 		numeric N = 32768,
 		numeric r = 16,
 		numeric p = 2
 		)
 	{
-		return VARIABLES.scryptUtil.scrypt(ARGUMENTS.password, ARGUMENTS.N, ARGUMENTS.r, ARGUMENTS.p);;
+		return VARIABLES.scryptUtil.scrypt(ARGUMENTS.s, ARGUMENTS.N, ARGUMENTS.r, ARGUMENTS.p);;
 	}
 
-	public boolean function scryptCheck(required string password = "", required string hash = "") {
-		var sCheck = VARIABLES.scryptUtil.check(ARGUMENTS.password, ARGUMENTS.hash);
-
-		if (VARIABLES.scryptUtil.check(ARGUMENTS.password, ARGUMENTS.hash)) {
+	public boolean function scryptCheck(required string s = "", required string hash = "") {
+		if (VARIABLES.scryptUtil.check(ARGUMENTS.s, ARGUMENTS.hash)) {
 			return true;
 		} else {
 			return false;

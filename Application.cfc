@@ -3,6 +3,6 @@ component
 {
 	THIS.javaSettings = {
 		LoadPaths: ["./libs"],
-		watchExtensions: "class,jar"
+		watchExtensions: "jar"
 	};
 }
