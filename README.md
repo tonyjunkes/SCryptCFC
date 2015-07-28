@@ -17,7 +17,7 @@ From there, depending on how you called the JAR library into your classpath call
 
 You then have access to the necessary functions for hashing like so:
 
-```
+```coldfusion-cfc
 password = SCrypt.scryptHash("password");
 writeOutput('<b>Hash: </b>' & password & '<br>');
 writeOutput('<b>Check Hash: </b>' & SCrypt.scryptCheck("password", password));
